@@ -14,6 +14,9 @@ const geocodeRoutes = require('./routes/geocode');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Railway usa proxy, necesario para rate-limit
+app.set('trust proxy', 1);
+
 // Middleware
 app.use(helmet());
 app.use(compression());
