@@ -19,10 +19,10 @@ app.use(helmet());
 app.use(compression());
 app.use(express.json());
 
-// CORS - permitir frontend de GitHub Pages
+// CORS
 app.use(cors({
   origin: [
-    process.env.FRONTEND_URL || '*',
+    'https://h0m10.github.io',
     'http://localhost:5173',
     'http://localhost:4173'
   ],
